@@ -43,7 +43,8 @@ const ListaPeli = () => {
                                         confirmButtonColor: '#3085d6',
                                         cancelButtonColor: '#d33',
                                         confirmButtonText: 'Si, eliminala!',
-                                        cancelButtonText: 'Cancelar'
+                                        cancelButtonText: 'Cancelar',
+                                        background: '#0f0e17'
                                       }).then((result) => {
                                         if (result.isConfirmed) {
                                           Swal.fire(

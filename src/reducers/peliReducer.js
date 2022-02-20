@@ -17,7 +17,7 @@ export const cargarpeli= (state={}, action ) =>{
 
         case peliTypes.eliminar:
             return{
-                pelicula: state.id.filter(est => est.nombre !== action.payload)
+                pelicula: state.id.filter(est => est.id !== action.payload)
             }
 
         default:

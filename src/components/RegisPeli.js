@@ -4,10 +4,9 @@ import { useForm } from '../hooks/useForm'
 import { fileUpload } from '../helpers/fileUpload'
 import { peliListAsync, registroPeliAsync } from '../actions/actionPeli'
 import ListaPeli from './ListaPeli'
-import { useNavigate } from 'react-router-dom'
 
-const RegisPeli = () => {
-    const navigate= useNavigate('/registroPeli')
+
+const RegisPeli = () => {    
     const dispatch = useDispatch()
     const [datos, handleInputChange]=useForm({
         nombre:'',
@@ -30,15 +29,14 @@ const RegisPeli = () => {
         })
     }
 
-    useEffect(() => {
-       dispatch(peliListAsync())      
-    }, [])    
-
     const handleSubmit= (e) =>{
         e.preventDefault();        
-        dispatch(registroPeliAsync(nombre,genero,imagen))
-        navigate()
+        dispatch(registroPeliAsync(nombre,genero,imagen))       
     }
+
+    useEffect(() => {
+        dispatch(peliListAsync())      
+     }, [])  
  
   return (
     <div className='formregisPeli'>
