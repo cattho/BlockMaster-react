@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { logout } from '../actions/loginAction';
 import {url, urlBuscador} from '../helpers/url'
+import Allmovies from './Allmovies';
 
 
 
