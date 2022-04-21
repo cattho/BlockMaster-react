@@ -6,12 +6,12 @@ export const loginReducer = (state={}, action ) => {
           return{
               id:action.payload.id,
               name:action.payload.name,
-              
+              login:true              
           }
           
           case types.logout:
               return{
-                  
+                  login:false                 
               }
           
   
