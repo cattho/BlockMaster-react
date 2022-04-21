@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Button, Pagination } from 'react-bootstrap'
 import { url } from '../helpers/url'
 
+
 const MenosValoradas = () => {
   const [cards, setCards] = useState([])
   const [paginacion, setPaginacion] = useState(1)

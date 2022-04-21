@@ -12,7 +12,7 @@ const Slider = () => {
         .then(res => res.json()
         )            
 
-      setSliderItem(data.results.sort(()=> Math.random() > 0.50 ? 1 : -1 ).slice(0,5));
+      setSliderItem(data.results.sort(()=> Math.random() > 0.50 ? 1 : -1 ).slice(0.5));
     //   el slice selecciona un segmento del arreglo, y lo trae 
 
     // el sort lo que hace es ordenar el arreglo, con el Math.random traigo aleatorios y la siguiente es comparar que si es mayor a .50, pára hacer una comparacion aleatoria
