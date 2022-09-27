@@ -1,5 +1,6 @@
 import { getAuth, signInWithEmailAndPassword, signInWithPopup, signOut } from 'firebase/auth'
-import { GoogleLg } from '../firebase/firebaseConfig'
+import Swal from 'sweetalert2'
+import {  GoogleLg } from '../firebase/firebaseConfig'
 import { types } from '../types/types'
 
 
@@ -16,7 +17,6 @@ export const logout= () =>{
       }
 }
 
-
 export const loginEmailPassword= (email,password) =>{
   return(dispatch) =>{
     const auth= getAuth();
@@ -28,7 +28,13 @@ export const loginEmailPassword= (email,password) =>{
       console.log('Estas logueado');
     })
     .catch(error =>{
-      console.log(error);
+      Swal.fire({
+        icon: 'error',
+        text: 'Datos ingresados invalidos',
+        background:'#0f0e17',
+        confirmButtonColor:'#FED941',
+        confirmButtonText:'Aceptar'
+      })
     })
   }
 }

@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import { Button, Pagination } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 import Swal from 'sweetalert2'
-import { url } from '../helpers/url'
+import { url, urlImg } from '../helpers/url'
 
 
 
 const Allmovies = () => {
-  
+
   const [cards, setCards] = useState([])
   const [paginacion, setPaginacion] = useState(1)
- 
 
   const llenarCards = async () => {
     const data = await fetch(url + `&page=${paginacion}`)
@@ -19,13 +19,13 @@ const Allmovies = () => {
   }
 
   const ActivarModal = (id) => {
-     cards.filter((mostrar) => (
-      mostrar.id === id      
-    )) 
+    cards.filter((mostrar) => (
+      mostrar.id === id
+    ))
   }
 
   useEffect(() => {
-    llenarCards()    
+    llenarCards()
   }, [])
 
   return (
@@ -36,17 +36,17 @@ const Allmovies = () => {
           cards.map(p => (
             <div key={p.id} className='card' onClick={() => ActivarModal(Swal.fire({
               title: `${p.title}`,
-              text: `${p.overview}`,
-              imageUrl: `${`https://image.tmdb.org/t/p/w1280` + p.backdrop_path}`,
+              text: `${p.overview.substring(0, 100)}...`,
+              imageUrl: `${`${urlImg}` + p.backdrop_path}`,
               imageWidth: 500,
               imageHeight: 300,
               imageAlt: `${p.title}`,
-              background:'#0f0e17',
+              background: '#0f0e17',
               backdrop: 'swal2-backdrop-hide',
-              confirmButtonColor:'#FED941',
-              confirmButtonText:'Aceptar'
+              confirmButtonColor: '#FED941',
+              confirmButtonText: 'Aceptar'
             }))}>
-              <img className='card-img' src={`https://image.tmdb.org/t/p/w1280` + p.poster_path} alt={p.title} />
+              <img className='card-img' src={`${urlImg}` + p.poster_path} alt={p.title} />
             </div>
           ))
 

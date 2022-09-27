@@ -127,7 +127,6 @@ body{
 /* formulario login */
 
 .formContainer{
-    background-image: url('https://res.cloudinary.com/dfp8qduho/image/upload/v1645324785/block-master/g13tpay003of01hoywrr.jpg');
     background-size: cover;
     display: flex;
     align-items: center;

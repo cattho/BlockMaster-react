@@ -12,7 +12,6 @@ export const useForm = (initialState = {}) => {
             ...datos,
             [target.name]:target.value
         })
-        console.log(datos, 'aca es useform');
     }
     return [datos, handleInputChange,reset]
 }

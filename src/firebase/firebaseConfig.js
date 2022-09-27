@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import {GoogleAuthProvider} from 'firebase/auth'
+import {GoogleAuthProvider, getAuth, signInWithPhoneNumber} from 'firebase/auth';
 import {getFirestore} from 'firebase/firestore'
 
 const firebaseConfig = {
@@ -14,8 +14,8 @@ const firebaseConfig = {
 
 
 export const app = initializeApp(firebaseConfig);
-export const GoogleLg= new GoogleAuthProvider()
-export const db= getFirestore()
+export const GoogleLg= new GoogleAuthProvider();
+export const db= getFirestore();
 
 
 // userDB
