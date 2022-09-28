@@ -35,7 +35,7 @@ const Allmovies = () => {
           cards.map(p => (
             <div key={p.id} className='card' onClick={() => ActivarModal(Swal.fire({
               title: `${p.title}`,
-              text: `${p.overview.substring(0, 100)}...`,
+              text: `${p.overview}`,
               imageUrl: `${`${urlImg}` + p.backdrop_path}`,
               imageWidth: 500,
               imageHeight: 300,

@@ -44,7 +44,7 @@ const BuscadorPeli = () => {
             e.target.busqueda.value = '';
             return;
         } else {
-            navigate(`/resultados?keyword=${keyword}`);
+            navigate(`/resultados?keyword=${keyword}`)
             e.target.busqueda.value = '';
         };
     }

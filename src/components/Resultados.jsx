@@ -1,6 +1,5 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { urlImg } from '../helpers/url';
 
@@ -30,7 +29,7 @@ const Resultados = () => {
                     movieResults.map(p => (
                         <div key={p.id} className='card' onClick={() =>Swal.fire({
                             title: `${p.title}`,
-                            text: `${p.overview.substring(0, 100)}...`,
+                            text: `${p.overview}`,
                             imageUrl: `${`${urlImg}` + p.backdrop_path}`,
                             imageWidth: 500,
                             imageHeight: 300,

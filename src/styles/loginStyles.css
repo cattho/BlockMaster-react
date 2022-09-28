@@ -1,0 +1,126 @@
+.formContainer {
+    background-image: url('https://images.pexels.com/photos/265685/pexels-photo-265685.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgloginContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.img-login {
+    width: 200px;
+}
+
+.formContainer form {
+    border: 1px solid blue;
+    width: 600px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--black);
+    font-weight: bold;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.22);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.1px);
+    -webkit-backdrop-filter: blur(5.1px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.formContainer input {
+    border: none;
+    width: 100%;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.formContainer label {
+    margin: 10px 0;
+}
+
+
+.btnLgn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4.5rem;
+    margin-top: 20px;
+}
+
+.btnlgn1 {
+    background: var(--primary);
+    color: var(--black);
+    font-weight: bold;
+    width: 195px;
+    height: 48px;
+    border: var(--primary);
+    border-radius: 5px;
+    padding: 10px 24px 10px 24px;
+}
+
+.btnlgn1:hover {
+    background: var(--black);
+    border: 1px solid var(--primary);
+    transition: background 1.5s;
+}
+
+.btnggl {
+    background: var(--black);
+    color: var(--primary);
+    font-weight: bold;
+    width: 195px;
+    height: 48px;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    padding: 10px 24px 10px 24px;
+}
+
+
+.btnggl:hover {
+    background: var(--primary);
+    border: 1px solid var(--black);
+    transition: background 1.5s;
+}
+
+.comeBack {
+    text-decoration: none;
+    font-size: 0.7rem;
+}
+
+@media (max-width: 1200px) {
+    .formContainer {
+        width: 100%;
+        min-height: 800px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .formContainer {
+        width: 100%;
+    }
+}
+
+@media (max-width: 800px) {
+    .formContainer {
+        width: 100vw;
+        padding: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .formContainer {
+        width: 100vw;
+        padding: 0;
+    }
+}

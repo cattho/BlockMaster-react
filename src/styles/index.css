@@ -1,5 +1,6 @@
-/* paleta de colores */
+@import './loginStyles.css';
 
+/* paleta de colores */
 :root{
     --black:#000000;
     --background: #0f0e17;
@@ -9,8 +10,8 @@
 }
 
 *{
-    padding: 2px;
-    margin: 0%;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
@@ -123,74 +124,6 @@ body{
     display: none;
 }
 
-
-/* formulario login */
-
-.formContainer{
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;   
-}
-
-.formregisPeli{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.btnLgn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 4.5rem;    
-}
-
-.btnlgn1{
-    background: var(--primary);
-    color: var(--black);
-    font-weight: bold;
-    width: 195px;
-    height: 48px;
-    border: var(--primary);
-    border-radius: 5px;
-    padding: 10px 24px 10px 24px;
-}
-
-.btnlgn1:hover{
-    background: var(--black) !important;
-    border: 1px solid var(--primary);
-}
-
-.btnggl{
-    background: var(--black);
-    color: var(--primary);
-    font-weight: bold;
-    width: 195px;
-    height: 48px;
-    border: 1px solid var(--primary);
-    border-radius: 5px;
-    padding: 10px 24px 10px 24px;
-}
-
-
-.btnggl:hover{
-    background: var(--primary) !important;
-    border: 1px solid var(--black);
-}
-
-.labelWords{
-    color: var(--white);
-    font-weight: bold;
-}
-
-.darkWords{
-    color: var(--black);
-    font-weight: bold;
-}
-
 /* cards-styles */
 .cardLogin{
     background: rgba(0, 0, 0, 0.9);
@@ -256,3 +189,4 @@ body{
     background: var(--white);
     opacity: 0.8;
 }
+

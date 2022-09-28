@@ -14,7 +14,7 @@ export const registroEmailPasswordNombre = (email, password, name) => {
                 Swal.fire({
                     position: 'center',
                     icon: 'error',
-                    title: 'El correo electronico que ingresaste se encuentra en uso',
+                    title: 'Verifica los datos ingresados',
                     showConfirmButton: false,
                     background: '#0f0e17',
                     color:'#FFFFFF',

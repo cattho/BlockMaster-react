@@ -2,14 +2,12 @@ import React, { Fragment } from 'react'
 import { Button, Form } from 'react-bootstrap'
 import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
-import Swal from 'sweetalert2'
 import { GoogleAsyncLogin, loginEmailPassword } from '../actions/loginAction'
 import { useForm } from '../hooks/useForm'
 
 function Login() {
 
   const dispatch = useDispatch()
-
 
   const handleGoogleAsync = () => {
     dispatch(GoogleAsyncLogin())
@@ -28,49 +26,43 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-
-    const regexEmail = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-    const email = e.target.value;
-    const password = e.taget.value;
-
-    if(email !== '' && regexEmail.test(email)){
-      alert('El email no es un formato valido')
-    }
   }
 
   return (
     <div className='formContainer'>
-      <Form className='formLogin' onSubmit={handleSubmit}>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label className='labelWords'>Correo</Form.Label>
-          <Form.Control
-            type="email"
-            placeholder="Enter email"
+      <form onSubmit={handleSubmit}>
+        <div className="imgloginContainer">
+          <img className='img-login' src='https://res.cloudinary.com/dfp8qduho/image/upload/v1643834025/block-master/logo-blockBuster_cyylkd.png' alt='Block-Master-Logo' />
+        </div>
+        <label >
+          Correo
+          <input
+            type="text"
+            placeholder="Ingresa tu correo electrónico"
             name="email"
             value={email}
-            onChange={handleInputChange}
-          />
-        </Form.Group>
+            onChange={handleInputChange} />
+        </label>
 
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label className='labelWords' >Contraseña</Form.Label>
-          <Form.Control
+        <label>
+          Contraseña
+          <input
             type="password"
-            placeholder="Password"
+            placeholder="Ingresa tu contraseña"
             name="password"
             value={password}
-            onChange={handleInputChange}
-          />
-        </Form.Group>
+            onChange={handleInputChange} />
+        </label>
 
         <div className='btnLgn'>
           <Button className='btnlgn1' type='submit' onClick={handleLoginEmailPassword}>Ingresar</Button>
           <Button className='btnggl'><img className="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="google button" onClick={handleGoogleAsync} /></Button>
         </div>
 
-        <Form.Label className='labelWords'>¿No tienes una cuenta? </Form.Label>
-        <Link to="/registro"> Registrate</Link>
-      </Form>
+        <label>¿No tienes una cuenta? <Link className='comeBack' to="/registro">Registrate</Link></label>
+        
+
+      </form>
     </div>
   )
 }
