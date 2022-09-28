@@ -3,7 +3,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    min-height: 900px;
+    min-width: 100%;
+    height: 900px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,8 +22,8 @@
 }
 
 .formContainer form {
-    border: 1px solid blue;
-    width: 600px;
+    width: 30%;
+    min-width: 30%;
     height: 500px;
     display: flex;
     flex-direction: column;
@@ -41,6 +42,7 @@
 .formContainer input {
     border: none;
     width: 100%;
+    min-width: 100%;
     padding: 5px;
     border-radius: 8px;
 }
@@ -56,6 +58,8 @@
     align-items: center;
     gap: 4.5rem;
     margin-top: 20px;
+    min-width: 100%;
+
 }
 
 .btnlgn1 {
@@ -113,14 +117,14 @@
 
 @media (max-width: 800px) {
     .formContainer {
-        width: 100vw;
+        min-width: 50%;
         padding: 0;
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
     .formContainer {
-        width: 100vw;
+        min-width: 50%;
         padding: 0;
     }
 }
