@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { Button, Pagination } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
 import Swal from 'sweetalert2'
 import { url, urlImg } from '../helpers/url'
 
@@ -42,6 +41,7 @@ const Allmovies = () => {
               imageHeight: 300,
               imageAlt: `${p.title}`,
               background: '#0f0e17',
+              color:'#FFFFFF',
               backdrop: 'swal2-backdrop-hide',
               confirmButtonColor: '#FED941',
               confirmButtonText: 'Aceptar'

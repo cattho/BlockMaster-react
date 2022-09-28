@@ -5,7 +5,6 @@ import { peliTypes } from "../types/types"
 
 // Eliminando peli
 export const deleteAsync = (nombre) =>{
-    console.log(nombre,'estoy en actionPeli funsion delete async');
     return async (dispatch) =>{
         const deleteCollection = collection(db, 'PeliculaCarga')
         const q= query(deleteCollection, where("nombre", "==", nombre ))
@@ -17,6 +16,8 @@ export const deleteAsync = (nombre) =>{
             deleteDoc(doc(db, 'PeliculaCarga',documento.id))
             .then(res =>{
                 dispatch(deleteSync(nombre))
+            }).catch(error =>{
+                console.log(error);
             })
         })
     }
