@@ -56,11 +56,12 @@ const BuscadorPeli = () => {
                     type="search"
                     name='buscador'
                     placeholder="Busca tu pelicula favorita"
-                    className="me-2"
+                    className="me-2 input-nav"
                     aria-label="Search"
+                    autocomplete="off"
                 />
-                <Button type='submit' className='btnNav'>Buscar</Button>
-                <Button className='btnNav' onClick={handleLogOut}><Link to="/login">Desconectar</Link></Button>
+                <Button type='submit' className='btn-src-nav'>Buscar</Button>
+                <Button className='btn-src-nav' onClick={handleLogOut}>Desconectar</Button>
             </Form>
         </div>
     )

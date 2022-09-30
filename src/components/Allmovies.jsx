@@ -30,7 +30,7 @@ const Allmovies = () => {
   return (
     <div>
       <h1 className='labelWords'>Todas las peliculas</h1>
-      <div className='card-container'>
+      <div className='card-container '>
         {
           cards.map(p => (
             <div key={p.id} className='card' onClick={() => ActivarModal(Swal.fire({
@@ -41,7 +41,7 @@ const Allmovies = () => {
               imageHeight: 300,
               imageAlt: `${p.title}`,
               background: '#0f0e17',
-              color:'#FFFFFF',
+              color: '#FFFFFF',
               backdrop: 'swal2-backdrop-hide',
               confirmButtonColor: '#FED941',
               confirmButtonText: 'Aceptar'

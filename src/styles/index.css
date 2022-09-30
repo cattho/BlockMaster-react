@@ -1,74 +1,50 @@
 @import './loginStyles.css';
+@import './navbarStyles.css';
 
 /* paleta de colores */
-:root{
-    --black:#000000;
+:root {
+    --black: #000000;
     --background: #0f0e17;
     --primary: #FED941;
-    --grey:#A7A9BE;
-    --white:#FFFFFE;
+    --grey: #A7A9BE;
+    --white: #FFFFFE;
 }
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body{
-    background-color:var(--background);
+body {
+    background-color: var(--background);
     width: 100%;
     min-height: 100%;
 }
 
-.linkslider{
+.linkslider {
     text-decoration: none;
     color: var(--primary);
 }
 
-/* Navbar styles */
-.navbar{
-    padding-left: 3rem ;
-    padding-right: 3rem;
-}
-
-.img-nav{
-    width: 107px;
-    height: 64px;
-}
-.btnNav{
-    background-color: var(--primary) !important;
-    color: var(--black);
-}
-
-.white{
-    color: var(--white) !important;
-    font-weight: bold;
-}
-
-.white:focus{
-    color: var(--primary) !important;
-    border-bottom: 1px solid var(--primary);
-}
-
 /* slider styles */
-.caption{
+.caption {
     width: 100%;
-   
+
 }
 
-.sliderContainer{
-    width: 100% ;
-    height: 410px;   
+.sliderContainer {
+    width: 100%;
+    height: 410px;
 }
 
-.sliderContainer img{
+.sliderContainer img {
     border-radius: 10px;
 }
 
-.btnSldrContainer{
-    display: flex;    
-    width: 100% ;
+.btnSldrContainer {
+    display: flex;
+    width: 100%;
     gap: 30px;
     left: 1.96%;
     right: 62.71%;
@@ -77,7 +53,7 @@ body{
     position: absolute;
 }
 
-.btnSlider1{
+.btnSlider1 {
     background: var(--primary);
     color: var(--black);
     font-weight: bold;
@@ -90,16 +66,16 @@ body{
     right: 54.01%;
     top: 0%;
     bottom: 0%;
-   
+
 }
 
-.btnSlider1:hover{
+.btnSlider1:hover {
     background: var(--black);
     color: var(--primary);
     border: 1 px solid var(--primary);
 }
 
-.btnSlider2{
+.btnSlider2 {
     background: var(--black);
     color: var(--primary);
     font-weight: bold;
@@ -108,13 +84,13 @@ body{
     border: 1px solid var(--primary);
     border-radius: 5px;
     padding: 10px 24px 10px 24px;
-    
+
 }
 
-.btnSlider2:hover{
-    background: var(--primary)!important;
+.btnSlider2:hover {
+    background: var(--primary) !important;
     color: var(--black);
-    border:(--primary) !important;
+    border: (--primary) !important;
 }
 
 
@@ -122,28 +98,20 @@ body{
 .carousel-control-prev,
 .carousel-control-prev-icon,
 .carousel-control-next-icon,
-.carousel-indicators{
+.carousel-indicators {
     display: none;
 }
 
 /* cards-styles */
-.cardLogin{
-    background: rgba(0, 0, 0, 0.9);
-    border-radius: 10px;
-}
-
-.cardLogin:hover{
-    border: 3px solid #FED941;
-    border-radius: 10px;
-}
-
-.card-container{
+.card-container {
     display: grid;
-    grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    flex-wrap: nowrap;
     padding: 5px;
 }
 
-.card{
+.card {
     width: 320px;
     height: 440px;
     border-radius: 8px;
@@ -151,25 +119,24 @@ body{
     cursor: pointer;
 }
 
-.card:hover{
+.card:hover {
     border: 1px solid var(--primary);
 }
 
-.card-img{
+.card-img {
     width: 100%;
     height: 100%;
-    
     border-radius: 15px;
 }
 
 
-.pagContainer{
+.pagContainer {
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
-.btnpg{
+.btnpg {
     background: var(--background) !important;
     border: 1px solid var(--primary);
     border-radius: 10px;
@@ -177,18 +144,17 @@ body{
     font-weight: bold;
 }
 
-.btnpg:hover{
+.btnpg:hover {
     background: var(--primary) !important;
-    color:var(--background) !important;
+    color: var(--background) !important;
     border: none !important;
 }
 
 
 /* tabla */
 
-.table{
+.table {
     margin-top: 10px;
     background: var(--white);
     opacity: 0.8;
 }
-

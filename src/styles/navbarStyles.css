@@ -1,0 +1,35 @@
+.navbar {
+    padding: 0 3rem;
+}
+
+.img-nav {
+    width: 107px;
+}
+
+.input-nav{
+    border: none;
+    border-radius: 0.25rem;
+    padding: 5px;
+}
+
+.input-nav:focus{
+   border: none;
+}
+
+.btn-src-nav{
+    background-color: var(--primary);
+    border: none;
+    color: var(--black);
+    font-weight: 500;
+    margin-left: 15px;
+}
+
+.btn-src-nav:hover {
+    background-color: var(--black);
+    color: var(--primary);
+}
+
+.white:focus {
+    color: var(--primary) !important;
+    text-decoration: underline;
+}
