@@ -1,4 +1,3 @@
-import { Link } from '@chakra-ui/react';
 import { Button, Form } from 'react-bootstrap'
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
@@ -51,17 +50,19 @@ const BuscadorPeli = () => {
 
     return (
         <div>
-            <Form className="d-flex" onSubmit={handleSubmit}>
+            <Form className="d-flex container-src" onSubmit={handleSubmit}>
                 <input
                     type="search"
                     name='buscador'
                     placeholder="Busca tu pelicula favorita"
                     className="me-2 input-nav"
                     aria-label="Search"
-                    autocomplete="off"
+                    autoComplete="off"
                 />
-                <Button type='submit' className='btn-src-nav'>Buscar</Button>
-                <Button className='btn-src-nav' onClick={handleLogOut}>Desconectar</Button>
+                <div className="btn-container-Nav">
+                    <Button type='submit' className='btn-src-nav'>Buscar</Button>
+                    <Button className='btn-src-nav' onClick={handleLogOut}>Desconectar</Button>
+                </div>
             </Form>
         </div>
     )

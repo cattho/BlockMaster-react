@@ -1,5 +1,5 @@
 export const fileUpload = async (file) =>{
-    const cloudUrl = 'https://api.cloudinary.com/v1_1/dfp8qduho/upload'
+    const cloudUrl = 'https://api.cloudinary.com/v1_1/dfp8qduho/image/upload'
 
     const formData = new FormData()
     formData.append('upload_preset','block_Master')
@@ -17,6 +17,6 @@ export const fileUpload = async (file) =>{
             throw await resp.json()
         }
     }catch(error){
-        throw error
+        console.log(error)
     }
 }

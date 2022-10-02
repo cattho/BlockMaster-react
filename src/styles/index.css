@@ -1,5 +1,7 @@
 @import './loginStyles.css';
 @import './navbarStyles.css';
+@import './sliderStyles.css';
+
 
 /* paleta de colores */
 :root {
@@ -27,79 +29,10 @@ body {
     color: var(--primary);
 }
 
-/* slider styles */
-.caption {
-    width: 100%;
-
-}
-
-.sliderContainer {
-    width: 100%;
-    height: 410px;
-}
-
-.sliderContainer img {
-    border-radius: 10px;
-}
-
-.btnSldrContainer {
+.labelWords{
+    color: var(--primary);
     display: flex;
-    width: 100%;
-    gap: 30px;
-    left: 1.96%;
-    right: 62.71%;
-    top: 74.19%;
-    bottom: 10.32%;
-    position: absolute;
-}
-
-.btnSlider1 {
-    background: var(--primary);
-    color: var(--black);
-    font-weight: bold;
-    width: 195px;
-    height: 48px;
-    border: var(--primary);
-    border-radius: 5px;
-    padding: 10px 24px 10px 24px;
-    left: 0%;
-    right: 54.01%;
-    top: 0%;
-    bottom: 0%;
-
-}
-
-.btnSlider1:hover {
-    background: var(--black);
-    color: var(--primary);
-    border: 1 px solid var(--primary);
-}
-
-.btnSlider2 {
-    background: var(--black);
-    color: var(--primary);
-    font-weight: bold;
-    width: 195px;
-    height: 48px;
-    border: 1px solid var(--primary);
-    border-radius: 5px;
-    padding: 10px 24px 10px 24px;
-
-}
-
-.btnSlider2:hover {
-    background: var(--primary) !important;
-    color: var(--black);
-    border: (--primary) !important;
-}
-
-
-.carousel-control-next,
-.carousel-control-prev,
-.carousel-control-prev-icon,
-.carousel-control-next-icon,
-.carousel-indicators {
-    display: none;
+    justify-content: center;
 }
 
 /* cards-styles */
@@ -112,8 +45,6 @@ body {
 }
 
 .card {
-    width: 320px;
-    height: 440px;
     border-radius: 8px;
     margin: 10px;
     cursor: pointer;

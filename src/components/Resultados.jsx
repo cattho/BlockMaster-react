@@ -24,7 +24,7 @@ const Resultados = () => {
     return (
         <>
             <h1 className='labelWords'>Resultados para: {keyword.toUpperCase()}</h1>
-            <div className="row">
+            <div className="card-container">
                 {
                     movieResults.map(p => (
                         <div key={p.id} className='card' onClick={() =>Swal.fire({
