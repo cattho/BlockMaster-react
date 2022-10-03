@@ -1,6 +1,7 @@
 @import './loginStyles.css';
 @import './navbarStyles.css';
 @import './sliderStyles.css';
+@import './regisPeliStyles.css';
 
 
 /* paleta de colores */
@@ -79,13 +80,4 @@ body {
     background: var(--primary) !important;
     color: var(--background) !important;
     border: none !important;
-}
-
-
-/* tabla */
-
-.table {
-    margin-top: 10px;
-    background: var(--white);
-    opacity: 0.8;
 }

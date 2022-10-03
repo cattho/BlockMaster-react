@@ -1,13 +1,13 @@
 export const types = {
-    login:'login',
+    login: 'login',
     logout: 'logout',
     register: 'register'
 }
 
 export const peliTypes = {
-    registro:'registrar',
+    registro: 'registrar',
     eliminar: 'eliminar',
     modificar: 'modificar',
-    listar:'listar',
+    listar: 'listar',
     search: 'search'
 }
