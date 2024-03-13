@@ -1,83 +1,77 @@
-@import './loginStyles.css';
-@import './navbarStyles.css';
-@import './sliderStyles.css';
-@import './regisPeliStyles.css';
-
+@import "./loginStyles.css";
+@import "./navbarStyles.css";
+@import "./sliderStyles.css";
+@import "./regisPeliStyles.css";
 
 /* paleta de colores */
 :root {
-    --black: #000000;
-    --background: #0f0e17;
-    --primary: #FED941;
-    --grey: #A7A9BE;
-    --white: #FFFFFE;
-}
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  --black: #000000;
+  --background: #0f0e17;
+  --primary: #fed941;
+  --grey: #a7a9be;
+  --white: #fffffe;
 }
 
 body {
-    background-color: var(--background);
-    width: 100%;
-    min-height: 100%;
+  background-color: var(--background);
+  width: 100%;
+  min-height: 100%;
+  user-select: none;
 }
 
 .linkslider {
-    text-decoration: none;
-    color: var(--primary);
+  text-decoration: none;
+  color: var(--primary);
 }
 
-.labelWords{
-    color: var(--primary);
-    display: flex;
-    justify-content: center;
+.labelWords {
+  margin-top: 4.37rem;
+  color: var(--primary);
+  display: flex;
+  justify-content: center;
 }
 
 /* cards-styles */
 .card-container {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-    flex-wrap: nowrap;
-    padding: 5px;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  flex-wrap: nowrap;
+  padding: 5px;
 }
 
 .card {
-    border-radius: 8px;
-    margin: 10px;
-    cursor: pointer;
+  border-radius: 8px;
+  margin: 10px;
+  cursor: pointer;
 }
 
 .card:hover {
-    border: 1px solid var(--primary);
+  border: 1px solid var(--primary);
 }
 
 .card-img {
-    width: 100%;
-    height: 100%;
-    border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
 }
 
-
 .pagContainer {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 .btnpg {
-    background: var(--background) !important;
-    border: 1px solid var(--primary);
-    border-radius: 10px;
-    color: var(--primary);
-    font-weight: bold;
+  background: var(--background) !important;
+  border: 1px solid var(--primary);
+  border-radius: 10px;
+  color: var(--primary);
+  font-weight: bold;
 }
 
 .btnpg:hover {
-    background: var(--primary) !important;
-    color: var(--background) !important;
-    border: none !important;
+  background: var(--primary) !important;
+  color: var(--background) !important;
+  border: none !important;
 }

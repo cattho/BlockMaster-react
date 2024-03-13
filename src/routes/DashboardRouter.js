@@ -12,7 +12,7 @@ const DashboardRouter = () => {
   return (
     <div>
         <NavBar />
-        <Slider />
+        {/* <Slider /> */}
         <Routes>
             <Route path='/' element={<Allmovies />} />
             <Route path='/masvaloradas' element={<MasValoradas />} />
