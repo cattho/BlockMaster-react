@@ -1,5 +1,5 @@
-import React from "react";
-import { Button, Card, CardGroup, Container, Table } from "react-bootstrap";
+import React, { useEffect, useState } from "react";
+import { Button, Card } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import Swal from "sweetalert2";
 import { deleteAsync } from "../actions/actionPeli";
@@ -7,7 +7,25 @@ import { deleteAsync } from "../actions/actionPeli";
 const ListaPeli = () => {
   const { pelicula } = useSelector((store) => store.peliculas);
   const dispatch = useDispatch();
+  const [updatedPelicula, setUpdatedPelicula] = useState(pelicula);
 
+  useEffect(() => {
+    setUpdatedPelicula(pelicula);
+  }, [pelicula]);
+
+  const handleDelete = (peli) => {
+    dispatch(deleteAsync(peli.nombre)).then(() => {
+      setUpdatedPelicula(
+        updatedPelicula.filter((p) => p.nombre !== peli.nombre)
+      );
+      Swal.fire({
+        icon: "success",
+        text: "Pelicula eliminada con exito",
+        background: "#0f0e17",
+        confirmButtonColor: "#FED941",
+      });
+    });
+  };
   return (
     <div className='card-container'>
       {pelicula && pelicula.length > 0 ? (
@@ -32,13 +50,7 @@ const ListaPeli = () => {
                     background: "#0f0e17",
                   }).then((result) => {
                     if (result.isConfirmed) {
-                      dispatch(deleteAsync(peli.nombre));
-                      Swal.fire({
-                        icon: "success",
-                        text: "Pelicula eliminada con exito",
-                        background: "#0f0e17",
-                        confirmButtonColor: "#FED941",
-                      });
+                      handleDelete(peli);
                     }
                   });
                 }}

@@ -69,7 +69,7 @@ function Login() {
           <Button className='btnggl'>
             <img
               className='google-icon'
-              src='https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg'
+              src='https://res.cloudinary.com/dfp8qduho/image/upload/v1710448145/block-master/dzvnjphmntrkjxl88we8.png'
               alt='google button'
               onClick={handleGoogleAsync}
             />

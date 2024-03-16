@@ -9,27 +9,25 @@ const RegisPeli = () => {
   const dispatch = useDispatch();
   const [datos, handleInputChange] = useForm({
     nombre: "",
-    imagen: "",
+    imagen: null,
     genero: "",
   });
 
   let { nombre, imagen, genero } = datos;
 
-  const handleFilechanged = async (e) => {
+  const handleFilechanged = (e) => {
     const file = e.target.files[0];
-    await fileUpload(file)
-      .then((r) => {
-        imagen = r;
-        console.log(r);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    handleInputChange({ target: { name: "imagen", value: file } });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    dispatch(registroPeliAsync(nombre, genero, imagen));
+    try {
+      const imageUrl = await fileUpload(imagen);
+      dispatch(registroPeliAsync({ nombre, genero, imagen: imageUrl }));
+    } catch (error) {
+      console.log("Error al cargar la imagen:", error);
+    }
   };
 
   useEffect(() => {
@@ -83,11 +81,7 @@ const RegisPeli = () => {
               onChange={handleFilechanged}
             />
             <div className='btn-container-res'>
-              <button
-                type='submit'
-                className='btn-src-nav btn-rgt'
-                onClick={fileUpload}
-              >
+              <button type='submit' className='btn-src-nav btn-rgt'>
                 Enviar Pelicula
               </button>
             </div>
